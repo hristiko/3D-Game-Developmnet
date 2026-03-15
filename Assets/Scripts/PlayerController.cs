@@ -15,7 +15,6 @@ public class PlayerController : MonoBehaviour
     [Header("Movement")]
     public float walkSpeed = 3.5f;
     public float runSpeed = 6.5f;
-    public float gravity = -20f;
 
     [Header("Camera")]
     public Transform cameraTransform;
@@ -34,7 +33,7 @@ public class PlayerController : MonoBehaviour
     bool pickaxeEquipped;
     float xRotation;
     float nextFireTime;
-    float yVelocity;
+    //float yVelocity;
 
     void Awake()
     {
@@ -85,14 +84,7 @@ public class PlayerController : MonoBehaviour
 
         Vector3 horizontalMove = move * currentSpeed;
 
-        if (controller.isGrounded && yVelocity < 0f)
-            yVelocity = -2f;
-
-        yVelocity += gravity * Time.deltaTime;
-
         Vector3 finalMove = horizontalMove;
-        finalMove.y = yVelocity;
-
         controller.Move(finalMove * Time.deltaTime);
 
         float animSpeed = 0f;
