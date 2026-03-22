@@ -30,8 +30,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 1.6, z: 0.121}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 8010065664524179302}
+  m_Children: []
   m_Father: {fileID: 3145783943849270073}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &1026303718650435020
@@ -117,12 +116,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2279626691647739496}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.11, z: 0.92}
+  m_LocalRotation: {x: -0.74087983, y: 0.6503429, z: -0.16767015, w: -0.006173214}
+  m_LocalPosition: {x: -0.31308246, y: -0.04540813, z: -1.2312939}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5522749981422830603}
+  m_Father: {fileID: 7590093868159912528}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5008842375770995676
 GameObject:
@@ -275,7 +274,6 @@ MonoBehaviour:
   digDamage: 1
   walkSpeed: 3.5
   runSpeed: 6.5
-  gravity: -20
   cameraTransform: {fileID: 5522749981422830603}
   mouseSensitivity: 150
   maxLookAngle: 60
@@ -590,6 +588,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3313212022165897006, guid: ee97cb0d42863da48a7823104da8c6e7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1345430424163067132}
+    - targetCorrespondingSourceObject: {fileID: 3313212022165897006, guid: ee97cb0d42863da48a7823104da8c6e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8010065664524179302}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee97cb0d42863da48a7823104da8c6e7, type: 3}
 --- !u!4 &359501983849662073 stripped

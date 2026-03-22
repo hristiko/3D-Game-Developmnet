@@ -12,6 +12,9 @@ public class PlayerController : MonoBehaviour
     public Pickaxe pickaxe;
     public int digDamage = 1;
 
+    [Header("Shooting")]
+    public GameObject pistolObject;
+
     [Header("Movement")]
     public float walkSpeed = 3.5f;
     public float runSpeed = 6.5f;
@@ -39,10 +42,14 @@ public class PlayerController : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         inventory = GetComponent<PlayerInventory>();
-        animator = GetComponentInChildren<Animator>();
+        if (animator == null)
+            animator = GetComponentInChildren<Animator>();
 
         pickaxeEquipped = true;
         pickaxeObject.SetActive(true);
+        pistolObject.SetActive(false);
+
+        animator.SetBool("GunMode", false);
     }
 
     void Start()
@@ -98,8 +105,8 @@ public class PlayerController : MonoBehaviour
 
     void Look()
     {
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
+        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity;
 
         transform.Rotate(Vector3.up * mouseX);
 
@@ -114,10 +121,23 @@ public class PlayerController : MonoBehaviour
         {
             nextFireTime = Time.time + fireCooldown;
 
+            animator.SetTrigger("Shoot");
+
+            Ray cameraRay = new Ray(cameraTransform.position, cameraTransform.forward);
+
+            Vector3 targetPoint;
+
+            if (Physics.Raycast(cameraRay, out RaycastHit hit, 100f))
+                targetPoint = hit.point;
+            else
+                targetPoint = cameraTransform.position + cameraTransform.forward * 100f;
+
+            Vector3 shotDirection = (targetPoint - muzzleObject.transform.position).normalized;
+
             GameObject bulletObj = Instantiate(
                 bulletPrefab,
                 muzzleObject.transform.position,
-                muzzleObject.transform.rotation
+                Quaternion.LookRotation(shotDirection)
             );
 
             Physics.IgnoreCollision(
@@ -125,8 +145,7 @@ public class PlayerController : MonoBehaviour
                 GetComponent<CharacterController>()
             );
 
-            bulletObj.GetComponent<Rigidbody>().velocity =
-                muzzleObject.transform.forward * bulletSpeed;
+            bulletObj.GetComponent<Rigidbody>().velocity = shotDirection * bulletSpeed;
         }
     }
 
@@ -145,17 +164,23 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            pickaxeEquipped = false;
-            pickaxeObject.SetActive(false);
+            pickaxeEquipped = true;
+            pickaxeObject.SetActive(true);
+            pistolObject.SetActive(false);
 
             if (pickaxe != null)
                 pickaxe.currentMineral = null;
+
+            animator.SetBool("GunMode", false);
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            pickaxeEquipped = true;
-            pickaxeObject.SetActive(true);
+            pickaxeEquipped = false;
+            pickaxeObject.SetActive(false);
+            pistolObject.SetActive(true);
+
+            animator.SetBool("GunMode", true);
         }
     }
 }

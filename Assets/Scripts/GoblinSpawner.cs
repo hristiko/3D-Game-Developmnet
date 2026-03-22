@@ -1,11 +1,11 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class GoblinSpawner : MonoBehaviour
 {
     public GameObject goblinPrefab;
     public Transform player;
-
     public Transform[] spawnPoints;
 
     public int totalGoblins = 9;
@@ -37,13 +37,20 @@ public class GoblinSpawner : MonoBehaviour
 
                 GameObject newGoblin = Instantiate(
                     goblinPrefab,
-                    spawnPoint.position,
+                    spawnPoint.position + Vector3.up * 1f,
                     spawnPoint.rotation
                 );
 
-                GoblinAI goblinAI = newGoblin.GetComponent<GoblinAI>();
-                if (goblinAI != null && player != null)
-                    goblinAI.player = player;
+                NavMeshAgent agent = newGoblin.GetComponent<NavMeshAgent>();
+                if (agent != null)
+                {
+                    if (NavMesh.SamplePosition(spawnPoint.position, out NavMeshHit hit, 2f, NavMesh.AllAreas))
+                        agent.Warp(hit.position);
+                }
+
+                GoblinBehaviour goblinBehaviour = newGoblin.GetComponent<GoblinBehaviour>();
+                if (goblinBehaviour != null)
+                    goblinBehaviour.player = player;
 
                 spawnedCount++;
             }
