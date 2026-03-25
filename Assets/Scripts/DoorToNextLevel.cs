@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,6 +9,23 @@ public class DoorToNextLevel : MonoBehaviour
     public float messageDuration = 2f;
 
     bool isLoading = false;
+    bool messageVisible = false;
+    float hideMessageTime = 0f;
+
+    void Start()
+    {
+        if (notEnoughMessage != null)
+            notEnoughMessage.SetActive(false);
+    }
+
+    void Update()
+    {
+        if (messageVisible && Time.time >= hideMessageTime)
+        {
+            notEnoughMessage.SetActive(false);
+            messageVisible = false;
+        }
+    }
 
     void OnTriggerEnter(Collider detectedCollider)
     {
@@ -31,14 +47,11 @@ public class DoorToNextLevel : MonoBehaviour
         else
         {
             if (notEnoughMessage != null)
-                StartCoroutine(ShowMessageTemporarily());
+            {
+                notEnoughMessage.SetActive(true);
+                messageVisible = true;
+                hideMessageTime = Time.time + messageDuration;
+            }
         }
-    }
-
-    IEnumerator ShowMessageTemporarily()
-    {
-        notEnoughMessage.SetActive(true);
-        yield return new WaitForSeconds(messageDuration);
-        notEnoughMessage.SetActive(false);
     }
 }

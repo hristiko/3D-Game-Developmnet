@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -8,57 +7,71 @@ public class GoblinSpawner : MonoBehaviour
     public Transform player;
     public Transform[] spawnPoints;
 
-    public int totalGoblins = 9;
     public int goblinsPerWave = 3;
     public float timeBetweenWaves = 180f;
 
+    public float navMeshSearchRadius = 2f;
+    public float spawnSpread = 0f;
+
+    int currentWaveIndex = 0;
+    float nextWaveTime = 0f;
+
     void Start()
     {
-        StartCoroutine(SpawnWaves());
+        if (spawnPoints == null || spawnPoints.Length == 0)
+            return;
+
+        SpawnWaveAtPoint(spawnPoints[currentWaveIndex]);
+        currentWaveIndex++;
+
+        nextWaveTime = Time.time + timeBetweenWaves;
     }
 
-    IEnumerator SpawnWaves()
+    void Update()
     {
-        int spawnedCount = 0;
+        if (spawnPoints == null || spawnPoints.Length == 0)
+            return;
 
-        while (spawnedCount < totalGoblins && spawnedCount < spawnPoints.Length)
+        if (currentWaveIndex >= spawnPoints.Length)
+            return;
+
+        if (Time.time >= nextWaveTime)
         {
-            int goblinsThisWave = goblinsPerWave;
+            SpawnWaveAtPoint(spawnPoints[currentWaveIndex]);
+            currentWaveIndex++;
 
-            if (spawnedCount + goblinsThisWave > totalGoblins)
-                goblinsThisWave = totalGoblins - spawnedCount;
+            nextWaveTime = Time.time + timeBetweenWaves;
+        }
+    }
 
-            if (spawnedCount + goblinsThisWave > spawnPoints.Length)
-                goblinsThisWave = spawnPoints.Length - spawnedCount;
+    void SpawnWaveAtPoint(Transform spawnPoint)
+    {
+        for (int i = 0; i < goblinsPerWave; i++)
+        {
+            Vector3 spawnPosition = spawnPoint.position;
 
-            for (int i = 0; i < goblinsThisWave; i++)
+            if (spawnSpread > 0f)
             {
-                Transform spawnPoint = spawnPoints[spawnedCount];
-
-                GameObject newGoblin = Instantiate(
-                    goblinPrefab,
-                    spawnPoint.position + Vector3.up * 1f,
-                    spawnPoint.rotation
-                );
-
-                NavMeshAgent agent = newGoblin.GetComponent<NavMeshAgent>();
-                if (agent != null)
-                {
-                    if (NavMesh.SamplePosition(spawnPoint.position, out NavMeshHit hit, 2f, NavMesh.AllAreas))
-                        agent.Warp(hit.position);
-                }
-
-                GoblinBehaviour goblinBehaviour = newGoblin.GetComponent<GoblinBehaviour>();
-                if (goblinBehaviour != null)
-                    goblinBehaviour.player = player;
-
-                spawnedCount++;
+                Vector2 randomOffset = Random.insideUnitCircle * spawnSpread;
+                spawnPosition += new Vector3(randomOffset.x, 0f, randomOffset.y);
             }
 
-            if (spawnedCount >= totalGoblins || spawnedCount >= spawnPoints.Length)
-                yield break;
+            GameObject newGoblin = Instantiate(
+                goblinPrefab,
+                spawnPosition,
+                spawnPoint.rotation
+            );
 
-            yield return new WaitForSeconds(timeBetweenWaves);
+            NavMeshAgent agent = newGoblin.GetComponent<NavMeshAgent>();
+            if (agent != null)
+            {
+                if (NavMesh.SamplePosition(spawnPosition, out NavMeshHit hit, navMeshSearchRadius, NavMesh.AllAreas))
+                    agent.Warp(hit.position);
+            }
+
+            GoblinBehaviour goblinBehaviour = newGoblin.GetComponent<GoblinBehaviour>();
+            if (goblinBehaviour != null)
+                goblinBehaviour.player = player;
         }
     }
 }
