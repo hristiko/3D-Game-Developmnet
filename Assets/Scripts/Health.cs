@@ -1,9 +1,14 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
+    public bool isPlayer = false;
+
     public int maxHealth = 100;
     public int currentHealth;
+
+    public bool destroyOnDeath = true;
 
     [Header("Death animation for Goblin")]
     public bool playDeathAnimation = false;
@@ -15,13 +20,20 @@ public class Health : MonoBehaviour
     void Awake()
     {
         currentHealth = maxHealth;
-        animator = GetComponentInChildren<Animator>();
+
+        if (animator == null)
+            animator = GetComponentInChildren<Animator>();
     }
 
     public void TakeDamage(int damageAmount)
     {
-        //if (isDead) return;
-        //if (damageAmount <= 0) return;
+        TakeDamage(damageAmount, DamageCause.Unknown);
+    }
+
+    public void TakeDamage(int damageAmount, DamageCause damageCause)
+    {
+        if (isDead) return;
+        if (damageAmount <= 0) return;
 
         currentHealth -= damageAmount;
 
@@ -34,6 +46,12 @@ public class Health : MonoBehaviour
         {
             isDead = true;
 
+            if (isPlayer && damageCause == DamageCause.Goblin)
+            {
+                SceneManager.LoadScene("GameLost");
+                return;
+            }
+
             if (playDeathAnimation && animator != null)
             {
                 animator.SetTrigger("Die");
@@ -41,7 +59,10 @@ public class Health : MonoBehaviour
             }
             else
             {
-                Destroy(gameObject);
+                if (destroyOnDeath)
+                    Destroy(gameObject);
+                else
+                    gameObject.SetActive(false);
             }
         }
     }

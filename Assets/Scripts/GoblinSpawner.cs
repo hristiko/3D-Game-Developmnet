@@ -16,6 +16,11 @@ public class GoblinSpawner : MonoBehaviour
     int currentWaveIndex = 0;
     float nextWaveTime = 0f;
 
+    public bool FinishedSpawning
+    {
+        get { return currentWaveIndex >= spawnPoints.Length; }
+    }
+
     void Start()
     {
         if (spawnPoints == null || spawnPoints.Length == 0)

@@ -134,7 +134,7 @@ public class GoblinBehaviour : MonoBehaviour
         animator.SetTrigger("Attack");
 
         if (playerHealth != null && !playerHealth.isDead)
-            playerHealth.TakeDamage(attackDamage);
+            playerHealth.TakeDamage(attackDamage, DamageCause.Goblin);
     }
 
     void UpdateFacing()

@@ -38,6 +38,15 @@ public class PlayerController : MonoBehaviour
     float nextFireTime;
     //float yVelocity;
 
+    [Header("Audio")]
+    public AudioSource gunAudioSource;
+    public AudioClip gunShotClip;
+    public float gunShotVolume = 1f;
+
+    public AudioSource pickaxeAudioSource;
+    public AudioClip pickaxeDigClip;
+    public float digVolume = 1f;
+
     void Awake()
     {
         controller = GetComponent<CharacterController>();
@@ -121,7 +130,8 @@ public class PlayerController : MonoBehaviour
         {
             nextFireTime = Time.time + fireCooldown;
 
-            animator.SetTrigger("Shoot");
+            if (gunAudioSource != null && gunShotClip != null)
+                gunAudioSource.PlayOneShot(gunShotClip, gunShotVolume);
 
             Ray cameraRay = new Ray(cameraTransform.position, cameraTransform.forward);
 
@@ -152,10 +162,11 @@ public class PlayerController : MonoBehaviour
     void Dig()
     {
         if (Input.GetMouseButtonDown(0))
-        {
+        {                
             animator.SetTrigger("Dig");
 
-            if (pickaxe != null && pickaxe.currentMineral != null)
+            if (pickaxe != null && pickaxe.currentMineral != null && pickaxeAudioSource != null && pickaxeDigClip != null)
+                pickaxeAudioSource.PlayOneShot(pickaxeDigClip, digVolume);
                 pickaxe.currentMineral.TakeDamage(digDamage, inventory);
         }
     }
