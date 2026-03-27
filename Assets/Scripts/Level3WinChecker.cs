@@ -3,25 +3,43 @@ using UnityEngine.SceneManagement;
 
 public class Level3WinChecker : MonoBehaviour
 {
-    public GoblinSpawner goblinSpawner;
+    public PlayerInventory playerInventory;
+    public int requiredMaterials = 33;
+    public int requiredGoblinKills = 21;
+    public string gameWonSceneName = "GameWon";
 
-    bool gameWonLoaded = false;
+    int startMaterials = 0;
+    int killedGoblins = 0;
+    bool isLoading = false;
+
+    void Start()
+    {
+        if (playerInventory == null)
+            playerInventory = FindObjectOfType<PlayerInventory>();
+
+        if (playerInventory != null)
+            startMaterials = playerInventory.materials;
+    }
 
     void Update()
     {
-        if (gameWonLoaded) return;
+        if (isLoading) return;
+        if (playerInventory == null) return;
 
-        bool allSpawnsFinished = true;
-        if (goblinSpawner != null)
-            allSpawnsFinished = goblinSpawner.FinishedSpawning;
+        int collectedThisLevel = playerInventory.materials - startMaterials;
 
-        bool noGoblinsLeft = GameObject.FindGameObjectsWithTag("Goblin").Length == 0;
-        bool noMineralsLeft = GameObject.FindGameObjectsWithTag("Mineral").Length == 0;
+        if (collectedThisLevel < 0)
+            collectedThisLevel = 0;
 
-        if (allSpawnsFinished && noGoblinsLeft && noMineralsLeft)
+        if (collectedThisLevel >= requiredMaterials && killedGoblins >= requiredGoblinKills)
         {
-            gameWonLoaded = true;
-            SceneManager.LoadScene("GameWon");
+            isLoading = true;
+            SceneManager.LoadSceneAsync(gameWonSceneName);
         }
+    }
+
+    public void RegisterGoblinKill()
+    {
+        killedGoblins++;
     }
 }

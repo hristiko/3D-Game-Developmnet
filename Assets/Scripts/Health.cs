@@ -52,6 +52,13 @@ public class Health : MonoBehaviour
                 return;
             }
 
+            if (CompareTag("Goblin"))
+            {
+                Level3WinChecker checker = FindObjectOfType<Level3WinChecker>();
+                if (checker != null)
+                    checker.RegisterGoblinKill();
+            }
+
             if (playDeathAnimation && animator != null)
             {
                 animator.SetTrigger("Die");
