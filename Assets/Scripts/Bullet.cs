@@ -7,25 +7,17 @@ public class Bullet : MonoBehaviour
 
     void Start()
     {
-        Destroy(gameObject, lifeTime); 
+        Destroy(gameObject, lifeTime);
     }
 
     void OnCollisionEnter(Collision collision)
     {
-        
-        if (collision.collider.CompareTag("Player"))
+        if (collision.collider.CompareTag("Goblin"))
         {
-            Destroy(gameObject);
-            return;
-        }
-
-        Health health = collision.collider.GetComponentInParent<Health>();
-        if (health != null)
-        {
+            Health health = collision.collider.GetComponent<Health>();
             health.TakeDamage(damage);
         }
 
         Destroy(gameObject);
     }
-
 }

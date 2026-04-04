@@ -36,7 +36,6 @@ public class PlayerController : MonoBehaviour
     bool pickaxeEquipped;
     float xRotation;
     float nextFireTime;
-    //float yVelocity;
 
     [Header("Audio")]
     public AudioSource gunAudioSource;

@@ -6,7 +6,7 @@ public class DoorToNextLevel : MonoBehaviour
     public string nextSceneName = "Level2";
     public int requiredMaterials = 16;
     public GameObject notEnoughMessage;
-    public float messageDuration = 2f;
+    public float messageDuration = 7f;
 
     bool isLoading = false;
     bool messageVisible = false;
