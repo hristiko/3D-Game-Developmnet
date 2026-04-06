@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.AI;
 
 public class Health : MonoBehaviour
 {
@@ -20,17 +21,10 @@ public class Health : MonoBehaviour
     void Awake()
     {
         currentHealth = maxHealth;
-
-        if (animator == null)
-            animator = GetComponentInChildren<Animator>();
+        animator = GetComponent<Animator>();
     }
 
-    public void TakeDamage(int damageAmount)
-    {
-        TakeDamage(damageAmount, DamageCause.Unknown);
-    }
-
-    public void TakeDamage(int damageAmount, DamageCause damageCause)
+    public void ApplyDamage(int damageAmount)
     {
         if (isDead) return;
         if (damageAmount <= 0) return;
@@ -46,13 +40,26 @@ public class Health : MonoBehaviour
         {
             isDead = true;
 
-            if (isPlayer && damageCause == DamageCause.Goblin)
+            if (CompareTag("Goblin"))
+            {
+                CapsuleCollider capsule = GetComponent<CapsuleCollider>();
+                capsule.enabled = false;
+
+                NavMeshAgent agent = GetComponent<NavMeshAgent>();
+                if (agent != null)
+                {
+                    agent.ResetPath();
+                    agent.enabled = false;
+                }
+            }
+
+            if (isPlayer)
             {
                 SceneManager.LoadScene("GameLost");
                 return;
             }
 
-            if (CompareTag("Goblin"))
+            if (CompareTag("Goblin") && SceneManager.GetActiveScene().name == "Level3")
             {
                 Level3WinChecker checker = FindObjectOfType<Level3WinChecker>();
                 if (checker != null)

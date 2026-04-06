@@ -18,7 +18,7 @@ public class Level3WinChecker : MonoBehaviour
             playerInventory = FindObjectOfType<PlayerInventory>();
 
         if (playerInventory != null)
-            startMaterials = playerInventory.materials;
+            startMaterials = playerInventory.materialsAmount;
     }
 
     void Update()
@@ -26,7 +26,7 @@ public class Level3WinChecker : MonoBehaviour
         if (isLoading) return;
         if (playerInventory == null) return;
 
-        int collectedThisLevel = playerInventory.materials - startMaterials;
+        int collectedThisLevel = playerInventory.materialsAmount - startMaterials;
 
         if (collectedThisLevel < 0)
             collectedThisLevel = 0;

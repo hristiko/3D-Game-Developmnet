@@ -39,7 +39,7 @@ public class DoorToNextLevel : MonoBehaviour
         if (inventory == null)
             return;
 
-        if (inventory.materials >= requiredMaterials)
+        if (inventory.materialsAmount >= requiredMaterials)
         {
             isLoading = true;
             SceneManager.LoadSceneAsync(nextSceneName);

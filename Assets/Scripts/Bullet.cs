@@ -15,7 +15,7 @@ public class Bullet : MonoBehaviour
         if (collision.collider.CompareTag("Goblin"))
         {
             Health health = collision.collider.GetComponent<Health>();
-            health.TakeDamage(damage);
+            health.ApplyDamage(damage);
         }
 
         Destroy(gameObject);

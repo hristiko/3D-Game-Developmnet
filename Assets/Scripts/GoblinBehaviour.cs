@@ -132,7 +132,7 @@ public class GoblinBehaviour : MonoBehaviour
             playerHealth = player.GetComponent<Health>();
 
         if (playerHealth != null && !playerHealth.isDead)
-            playerHealth.TakeDamage(attackDamage, DamageCause.Goblin);
+            playerHealth.ApplyDamage(attackDamage);
     }
 
     void UpdateFacing(float distanceToPlayer)
@@ -146,18 +146,16 @@ public class GoblinBehaviour : MonoBehaviour
 
         faceDirection.y = 0f;
 
-        if (faceDirection.sqrMagnitude > 0.001f)
-        {
-            Quaternion targetRot =
-                Quaternion.LookRotation(faceDirection.normalized) *
-                Quaternion.Euler(0f, 180f, 0f);
+        Quaternion targetRot =
+            Quaternion.LookRotation(faceDirection.normalized) *
+            Quaternion.Euler(0f, 180f, 0f);
 
-            transform.rotation = Quaternion.Slerp(
-                transform.rotation,
-                targetRot,
-                rotateSpeed * Time.deltaTime
-            );
-        }
+        transform.rotation = Quaternion.Slerp(
+            transform.rotation,
+            targetRot,
+            rotateSpeed * Time.deltaTime
+        );
+
     }
 
     void UpdateAnimation()

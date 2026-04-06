@@ -2,13 +2,13 @@ using UnityEngine;
 
 public class PlayerInventory : MonoBehaviour
 {
-    public int materials = 0;
+    public int materialsAmount = 0;
 
     public void AddMaterials(int amount)
     {
-        materials += amount;
-        if (materials < 0) materials = 0;
+        materialsAmount += amount;
+        if (materialsAmount < 0) materialsAmount = 0;
 
-        Debug.Log("Materials: " + materials);
+        Debug.Log("Materials: " + materialsAmount);
     }
 }
