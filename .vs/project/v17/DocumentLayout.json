@@ -3,31 +3,23 @@
   "WorkspaceRootPath": "D:\\H.K\\FAX\\Game Development\\Project\\project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7CA597AC-799E-2D81-E8A0-0EA9A568434E}|Assembly-CSharp.csproj|D:\\H.K\\FAX\\Game Development\\Project\\project\\assets\\scripts\\levelscenemarker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CA597AC-799E-2D81-E8A0-0EA9A568434E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\levelscenemarker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CA597AC-799E-2D81-E8A0-0EA9A568434E}|Assembly-CSharp.csproj|D:\\H.K\\FAX\\Game Development\\Project\\project\\assets\\scripts\\level3winchecker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CA597AC-799E-2D81-E8A0-0EA9A568434E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\level3winchecker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CA597AC-799E-2D81-E8A0-0EA9A568434E}|Assembly-CSharp.csproj|D:\\H.K\\FAX\\Game Development\\Project\\project\\assets\\scripts\\gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CA597AC-799E-2D81-E8A0-0EA9A568434E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CA597AC-799E-2D81-E8A0-0EA9A568434E}|Assembly-CSharp.csproj|d:\\h.k\\fax\\game development\\project\\project\\assets\\scripts\\menubuttons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CA597AC-799E-2D81-E8A0-0EA9A568434E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menubuttons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7CA597AC-799E-2D81-E8A0-0EA9A568434E}|Assembly-CSharp.csproj|D:\\H.K\\FAX\\Game Development\\Project\\project\\assets\\scripts\\doortonextlevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7CA597AC-799E-2D81-E8A0-0EA9A568434E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\doortonextlevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CA597AC-799E-2D81-E8A0-0EA9A568434E}|Assembly-CSharp.csproj|D:\\H.K\\FAX\\Game Development\\Project\\project\\assets\\scripts\\menubuttons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CA597AC-799E-2D81-E8A0-0EA9A568434E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menubuttons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CA597AC-799E-2D81-E8A0-0EA9A568434E}|Assembly-CSharp.csproj|D:\\H.K\\FAX\\Game Development\\Project\\project\\assets\\scripts\\level3winchecker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CA597AC-799E-2D81-E8A0-0EA9A568434E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\level3winchecker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7CA597AC-799E-2D81-E8A0-0EA9A568434E}|Assembly-CSharp.csproj|D:\\H.K\\FAX\\Game Development\\Project\\project\\assets\\scripts\\goblinspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7CA597AC-799E-2D81-E8A0-0EA9A568434E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\goblinspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CA597AC-799E-2D81-E8A0-0EA9A568434E}|Assembly-CSharp.csproj|d:\\h.k\\fax\\game development\\project\\project\\assets\\scripts\\goblinbehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7CA597AC-799E-2D81-E8A0-0EA9A568434E}|Assembly-CSharp.csproj|D:\\H.K\\FAX\\Game Development\\Project\\project\\assets\\scripts\\goblinbehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7CA597AC-799E-2D81-E8A0-0EA9A568434E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\goblinbehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -66,11 +58,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 8,
               "Title": "PlayerController.cs",
               "DocumentMoniker": "D:\\H.K\\FAX\\Game Development\\Project\\project\\Assets\\Scripts\\PlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerController.cs",
@@ -78,12 +70,11 @@
               "RelativeToolTip": "Assets\\Scripts\\PlayerController.cs",
               "ViewState": "AgIAAC8AAAAAAAAAAAAAwDQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T11:03:18.244Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-04T11:03:18.244Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 7,
               "Title": "PlayerInventory.cs",
               "DocumentMoniker": "D:\\H.K\\FAX\\Game Development\\Project\\project\\Assets\\Scripts\\PlayerInventory.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerInventory.cs",
@@ -91,12 +82,11 @@
               "RelativeToolTip": "Assets\\Scripts\\PlayerInventory.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-25T21:34:57.408Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-25T21:34:57.408Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 6,
               "Title": "Health.cs",
               "DocumentMoniker": "D:\\H.K\\FAX\\Game Development\\Project\\project\\Assets\\Scripts\\Health.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Health.cs",
@@ -104,12 +94,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Health.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAAwBYAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T10:58:12.902Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-04T10:58:12.902Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "Bullet.cs",
               "DocumentMoniker": "D:\\H.K\\FAX\\Game Development\\Project\\project\\Assets\\Scripts\\Bullet.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Bullet.cs",
@@ -117,12 +106,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Bullet.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T12:29:58.382Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-04T12:29:58.382Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "GoblinBehaviour.cs",
               "DocumentMoniker": "D:\\H.K\\FAX\\Game Development\\Project\\project\\Assets\\Scripts\\GoblinBehaviour.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GoblinBehaviour.cs",
@@ -130,12 +118,11 @@
               "RelativeToolTip": "Assets\\Scripts\\GoblinBehaviour.cs",
               "ViewState": "AgIAAF0AAAAAAAAAAAAowGgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-11T12:43:34.994Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-11T12:43:34.994Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "GoblinSpawner.cs",
               "DocumentMoniker": "D:\\H.K\\FAX\\Game Development\\Project\\project\\Assets\\Scripts\\GoblinSpawner.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GoblinSpawner.cs",
@@ -143,59 +130,32 @@
               "RelativeToolTip": "Assets\\Scripts\\GoblinSpawner.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAQwEUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-15T13:03:00.197Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-15T13:03:00.197Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Level3WinChecker.cs",
               "DocumentMoniker": "D:\\H.K\\FAX\\Game Development\\Project\\project\\Assets\\Scripts\\Level3WinChecker.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Level3WinChecker.cs",
               "ToolTip": "D:\\H.K\\FAX\\Game Development\\Project\\project\\Assets\\Scripts\\Level3WinChecker.cs",
               "RelativeToolTip": "Assets\\Scripts\\Level3WinChecker.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-26T15:18:04.012Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LevelSceneMarker.cs",
-              "DocumentMoniker": "D:\\H.K\\FAX\\Game Development\\Project\\project\\Assets\\Scripts\\LevelSceneMarker.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\LevelSceneMarker.cs",
-              "ToolTip": "D:\\H.K\\FAX\\Game Development\\Project\\project\\Assets\\Scripts\\LevelSceneMarker.cs",
-              "RelativeToolTip": "Assets\\Scripts\\LevelSceneMarker.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-26T15:16:00.998Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "MenuButtons.cs",
               "DocumentMoniker": "D:\\H.K\\FAX\\Game Development\\Project\\project\\Assets\\Scripts\\MenuButtons.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MenuButtons.cs",
               "ToolTip": "D:\\H.K\\FAX\\Game Development\\Project\\project\\Assets\\Scripts\\MenuButtons.cs",
               "RelativeToolTip": "Assets\\Scripts\\MenuButtons.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-26T15:15:29.964Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GameState.cs",
-              "DocumentMoniker": "D:\\H.K\\FAX\\Game Development\\Project\\project\\Assets\\Scripts\\GameState.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\GameState.cs",
-              "ToolTip": "D:\\H.K\\FAX\\Game Development\\Project\\project\\Assets\\Scripts\\GameState.cs",
-              "RelativeToolTip": "Assets\\Scripts\\GameState.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-26T15:13:20.334Z",
               "EditorCaption": ""
             },
             {
@@ -206,14 +166,13 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\DoorToNextLevel.cs",
               "ToolTip": "D:\\H.K\\FAX\\Game Development\\Project\\project\\Assets\\Scripts\\DoorToNextLevel.cs",
               "RelativeToolTip": "Assets\\Scripts\\DoorToNextLevel.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwCkAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-23T14:36:45.75Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-23T14:36:45.75Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 11,
               "Title": "Pickaxe.cs",
               "DocumentMoniker": "D:\\H.K\\FAX\\Game Development\\Project\\project\\Assets\\Scripts\\Pickaxe.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Pickaxe.cs",
@@ -221,12 +180,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Pickaxe.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAA3wA4AAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T15:13:56.01Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-09T15:13:56.01Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 10,
               "Title": "Mineral.cs",
               "DocumentMoniker": "D:\\H.K\\FAX\\Game Development\\Project\\project\\Assets\\Scripts\\Mineral.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Mineral.cs",
@@ -234,12 +192,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Mineral.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAxwBIAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-25T21:31:58.55Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-25T21:31:58.55Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 9,
               "Title": "PlayerUIs.cs",
               "DocumentMoniker": "D:\\H.K\\FAX\\Game Development\\Project\\project\\Assets\\Scripts\\PlayerUIs.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerUIs.cs",
@@ -247,8 +204,7 @@
               "RelativeToolTip": "Assets\\Scripts\\PlayerUIs.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-10T10:06:22.268Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-10T10:06:22.268Z"
             }
           ]
         }
