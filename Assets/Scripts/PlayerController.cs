@@ -30,8 +30,10 @@ public class PlayerController : MonoBehaviour
     public float bulletSpeed = 30f;
     public float fireCooldown = 0.2f;
 
-    CharacterController controller;
-    PlayerInventory inventory;
+    [Header("Player's character controller")]
+    public CharacterController controller;
+    [Header("Player's inventory")]
+    public PlayerInventory inventory;
 
     bool pickaxeEquipped;
     float xRotation;
@@ -48,11 +50,6 @@ public class PlayerController : MonoBehaviour
 
     void Awake()
     {
-        controller = GetComponent<CharacterController>();
-        inventory = GetComponent<PlayerInventory>();
-        if (animator == null)
-            animator = GetComponentInChildren<Animator>();
-
         pickaxeEquipped = true;
         pickaxeObject.SetActive(true);
         pistolObject.SetActive(false);
@@ -129,8 +126,7 @@ public class PlayerController : MonoBehaviour
         {
             nextFireTime = Time.time + fireCooldown;
 
-            if (gunAudioSource != null && gunShotClip != null)
-                gunAudioSource.PlayOneShot(gunShotClip, gunShotVolume);
+            gunAudioSource.PlayOneShot(gunShotClip, gunShotVolume);
 
             Ray cameraRay = new Ray(cameraTransform.position, cameraTransform.forward);
 
@@ -165,8 +161,10 @@ public class PlayerController : MonoBehaviour
             animator.SetTrigger("Dig");
 
             if (pickaxe != null && pickaxe.currentMineral != null && pickaxeAudioSource != null && pickaxeDigClip != null)
+            {
                 pickaxeAudioSource.PlayOneShot(pickaxeDigClip, digVolume);
                 pickaxe.currentMineral.TakeDamage(digDamage, inventory);
+            }
         }
     }
 

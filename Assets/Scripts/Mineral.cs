@@ -17,14 +17,13 @@ public class Mineral : MonoBehaviour
     public void TakeDamage(int amount, PlayerInventory inventory)
     {
         if (mined) return;
-        if (amount <= 0) return;
 
         currentHealth -= amount;
 
         if (currentHealth < 0)
             currentHealth = 0;
 
-        Debug.Log(gameObject.name + " HP: " + currentHealth);
+        //Debug.Log(gameObject.name + " HP: " + currentHealth);
 
         if (currentHealth <= 0)
         {

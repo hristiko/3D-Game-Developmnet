@@ -67,13 +67,6 @@ public class GoblinSpawner : MonoBehaviour
                 spawnPoint.rotation
             );
 
-            NavMeshAgent agent = newGoblin.GetComponent<NavMeshAgent>();
-            if (agent != null)
-            {
-                if (NavMesh.SamplePosition(spawnPosition, out NavMeshHit hit, navMeshSearchRadius, NavMesh.AllAreas))
-                    agent.Warp(hit.position);
-            }
-
             GoblinBehaviour goblinBehaviour = newGoblin.GetComponent<GoblinBehaviour>();
             if (goblinBehaviour != null)
                 goblinBehaviour.player = player;

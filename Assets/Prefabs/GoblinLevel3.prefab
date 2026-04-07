@@ -166,7 +166,7 @@ MonoBehaviour:
   currentHealth: 0
   destroyOnDeath: 1
   playDeathAnimation: 1
-  animator: {fileID: 0}
+  animator: {fileID: 6989426495527548129}
   destroyDelay: 2
   isDead: 0
 --- !u!114 &7794193664553570511

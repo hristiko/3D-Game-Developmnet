@@ -12,7 +12,7 @@ public class Pickaxe : MonoBehaviour
     {
         if (currentMineral != null && Time.time - lastTimeTouchingMineral > mineralForgetDelay)
         {
-            Debug.Log("Exited mineral: " + currentMineral.name);
+            //Debug.Log("Exited mineral: " + currentMineral.name);
             currentMineral = null;
         }
     }

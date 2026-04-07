@@ -29,7 +29,6 @@ public class GoblinBehaviour : MonoBehaviour
     {
         myHealth = GetComponent<Health>();
         agent = GetComponent<NavMeshAgent>();
-
         animator = GetComponent<Animator>();
     }
 

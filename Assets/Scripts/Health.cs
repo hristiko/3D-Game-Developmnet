@@ -21,20 +21,18 @@ public class Health : MonoBehaviour
     void Awake()
     {
         currentHealth = maxHealth;
-        animator = GetComponent<Animator>();
     }
 
     public void ApplyDamage(int damageAmount)
     {
         if (isDead) return;
-        if (damageAmount <= 0) return;
 
         currentHealth -= damageAmount;
 
         if (currentHealth < 0)
             currentHealth = 0;
 
-        Debug.Log(gameObject.name + " HP: " + currentHealth);
+        //Debug.Log(gameObject.name + " HP: " + currentHealth);
 
         if (currentHealth <= 0)
         {
@@ -50,6 +48,13 @@ public class Health : MonoBehaviour
                 {
                     agent.ResetPath();
                     agent.enabled = false;
+                } 
+
+                if (SceneManager.GetActiveScene().name == "Level3")
+                {
+                    Level3WinChecker checker = FindObjectOfType<Level3WinChecker>();
+                    if (checker != null)
+                        checker.RegisterGoblinKill();
                 }
             }
 
@@ -59,13 +64,6 @@ public class Health : MonoBehaviour
                 return;
             }
 
-            if (CompareTag("Goblin") && SceneManager.GetActiveScene().name == "Level3")
-            {
-                Level3WinChecker checker = FindObjectOfType<Level3WinChecker>();
-                if (checker != null)
-                    checker.RegisterGoblinKill();
-            }
-
             if (playDeathAnimation && animator != null)
             {
                 animator.SetTrigger("Die");
@@ -73,10 +71,7 @@ public class Health : MonoBehaviour
             }
             else
             {
-                if (destroyOnDeath)
-                    Destroy(gameObject);
-                else
-                    gameObject.SetActive(false);
+                Destroy(gameObject);
             }
         }
     }
