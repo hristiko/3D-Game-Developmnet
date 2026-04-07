@@ -1,6 +1,6 @@
 # Miner's Escape
 
-Miner's Escape is a 3D cave adventure game where the player explores underground areas, gathers minerals, fights goblins, and tries to survive while progressing deeper into the mine.
+Miner's Escape is a 3D cave adventure game where the player explores underground areas, gathers minerals, fights goblins, and tries to survive while progressing deeper into the mine. It's a course (3D Game Development) project
 
 ## About the Game
 
