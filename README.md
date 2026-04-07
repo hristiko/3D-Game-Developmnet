@@ -22,9 +22,21 @@ To succeed, the player must balance collecting resources with surviving enemy at
 
 ## Controls
 
-- **W / A / S / D** â€“ movement
-- **Mouse** â€“ camera / aiming
-- **Left Shift** â€“ run
-- **Left Mouse Button** â€“ dig or shoot
-- **1** â€“ equip pickaxe
-- **2** â€“ equip pistol
+- **W / A / S / D** – movement
+- **Mouse** – camera / aiming
+- **Left Shift** – run
+- **Left Mouse Button** – dig or shoot
+- **1** – equip pickaxe
+- **2** – equip pistol
+
+## Screenshots
+
+![Axe model](photos/Capture.PNG)
+![Mineral model](photos/Capture2.PNG)
+![Ceiling](photos/ceiling.PNG)
+![Goblin model](photos/goblin.PNG)
+![Pistol model](photos/Gun.PNG)
+![Player model for level 2](photos/Level2Player.PNG)
+![Player model for level 3](photos/Level3Player.PNG)
+![Player model for level 1](photos/playerV1.PNG)
+![Player model for level 2](photos/Level2Player.PNG)
